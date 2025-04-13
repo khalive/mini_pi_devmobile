@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    tools:context=".activities.AdminActivity">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#0C5E47"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <!-- Logo -->
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/logomrtn"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/app_logo" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/app_name"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:paddingStart="12dp"
+            android:gravity="center_vertical"
+            android:textStyle="bold" />
+
+        <!-- Settings Icon -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_settings"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/settings" />
+    </LinearLayout>
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_search_bar"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="8dp"
+        android:paddingHorizontal="12dp"
+        android:hint="@string/search_hint"
+        android:textSize="16sp"
+        android:inputType="text" />
+
+    <!-- Buttons -->
+    <GridLayout
+        android:id="@+id/buttonGrid"
+        android:layout_below="@id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:paddingHorizontal="16dp"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:text="@string/add_publication"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#0C5E47"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:text="@string/edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#0C5E47"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:text="@string/delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#0C5E47"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnSet"
+            android:text="@string/set"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#0C5E47"
+            android:textColor="#FFFFFF" />
+    </GridLayout>
+
+
+
+    <!-- Footer Navigation -->
+    <LinearLayout
+        android:id="@+id/footerNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:weightSum="3"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/ivHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home"
+            android:layout_gravity="center"
+            android:padding="12dp"
+            android:contentDescription="@string/home" />
+
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_search"
+            android:layout_gravity="center"
+            android:padding="12dp"
+            android:contentDescription="@string/search" />
+
+        <TextView
+            android:id="@+id/tvValidate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/validate"
+            android:gravity="center"
+            android:textColor="#0C5E47"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:padding="12dp" />
+    </LinearLayout>
+</RelativeLayout>

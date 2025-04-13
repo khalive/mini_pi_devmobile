@@ -1,0 +1,11 @@
+<resources>
+    <!-- Thème de base (light) -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Couleur primaire -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- Couleur primaire foncée -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!-- Couleur d'accent -->
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+</resources>

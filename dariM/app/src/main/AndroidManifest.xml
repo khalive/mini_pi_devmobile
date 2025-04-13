@@ -1,0 +1,47 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Activité de connexion (écran principal) -->
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Interface Administrateur -->
+        <activity
+            android:name=".activities.AdminActivity"
+            android:label="Interface Admin"
+            android:exported="false"
+            android:parentActivityName=".activities.LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.LoginActivity" />
+        </activity>
+
+        <!-- Interface Utilisateur -->
+        <activity
+            android:name=".activities.UserActivity"
+            android:label="Interface Utilisateur"
+            android:exported="false"
+            android:parentActivityName=".activities.LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.LoginActivity" />
+        </activity>
+
+    </application>
+
+</manifest>
